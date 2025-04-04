@@ -5,6 +5,9 @@ const axios = require('axios');
 const app = express();
 app.use(cors());
 app.use(express.json());
+app.get("/", (req, res) => {
+    res.send("MCP Server Tester Backend is running!");
+});
 
 app.post('/test', async (req, res) => {
   const { url } = req.body;
